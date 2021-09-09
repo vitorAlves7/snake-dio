@@ -49,6 +49,14 @@ function update(event){
 }
 
 function inicarJogo(){
+
+    for(i = 1; i < snake.length; i++){
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo);
+            alert('Game over :(');
+        }
+
+    }
     
     if( snake[0].x > 15 * box && direction == "right"){
         snake[0].x = 0;
@@ -76,7 +84,14 @@ function inicarJogo(){
     if(direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
 
-    snake.pop();
+    if(snakeX != food.x || snakeY != food.y){
+        snake.pop();
+    }
+    else {
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+    }
+
 
     let newHead = {
         x: snakeX,
