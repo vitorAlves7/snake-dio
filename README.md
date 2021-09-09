@@ -1,6 +1,6 @@
 # snake-dio
 
-Projeto destinado a recriar o Jogo da cobrinha com intiuto de de praticar algumas propriedade do JavaScript.
+Projeto destinado a recriar o Jogo da cobrinha com intuito de de praticar algumas propriedade do JavaScript.
 
 ![Imagem do Jogo](snakeimage.png)
 
